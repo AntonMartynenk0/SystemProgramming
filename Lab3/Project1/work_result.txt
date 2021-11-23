@@ -1,0 +1,10 @@
+Thread number 0: 5.000000 sec
+Thread number 2: 7.000000 sec
+Thread number 6: 9.000000 sec
+Thread number 3: 14.000000 sec
+Thread number 1: 19.000000 sec
+Thread number 5: 23.000000 sec
+Thread number 8: 27.000000 sec
+Thread number 9: 29.000000 sec
+Thread number 4: 31.000000 sec
+Thread number 7: 34.000000 sec

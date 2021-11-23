@@ -1,0 +1,69 @@
+﻿<Page
+    x:Class="lab5.Calculator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:lab5"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textBlock" Grid.Row="1" Grid.Column="1" TextAlignment="Right" FontSize="24" HorizontalAlignment="Left" Width="auto" Height="auto" Margin="20,5,0,0" Grid.ColumnSpan="4" MaxLines="1"/>
+        <TextBox x:Name="textBoxResult" Grid.Row="1" Grid.Column="1" TextAlignment="Right" Text="0" FontSize="64" HorizontalAlignment="Right" Width="407" Height="auto" Margin="1" Grid.ColumnSpan="4" IsReadOnly="True" BorderThickness ="0"/>
+        <Button x:Name="buttonCe" Grid.Row="2" Grid.Column="1" Width="100" Height="70" Content="CE" FontSize="24" Margin="1" Click="buttonCe_Click"/>
+        <Button x:Name="buttonC" Grid.Row="2" Grid.Column="2" Width="100" Height="70" Content="C" FontSize="24" Margin="1" Click="buttonC_Click"/>
+        <Button x:Name="buttonDel" Grid.Row="2" Grid.Column="3" Width="203" Height="70" Content="←" FontSize="24" Margin="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Click="buttonDel_Click"/>
+
+        <Button x:Name="buttonSecondPow" Grid.Row="3" Grid.Column="1" Width="100" Height="70" Content="x²" FontSize="24" Margin="1" Click="buttonSecondPow_Click"/>
+        <Button x:Name="buttonThirdPow" Grid.Row="3" Grid.Column="2" Width="100" Height="70" Content="x³" FontSize="24" Margin="1" Click="buttonThirdPow_Click"/>
+        <Button x:Name="buttonSquareRoot" Grid.Row="3" Grid.Column="3" Width="100" Height="70" Content="√x" FontSize="24" Margin="1" Click="buttonSquareRoot_Click"/>
+        <Button x:Name="buttonLogarithm" Grid.Row="3" Grid.Column="4" Width="100" Height="70" Content="log₁₀x" FontSize="24" Margin="1" Click="buttonLogarithm_Click"/>
+
+        <Button x:Name="buttonCos" Grid.Row="4" Grid.Column="2" Width="100" Height="70" Content="cos" FontSize="24" Margin="1" Click="buttonCos_Click"/>
+        <Button x:Name="buttonSis" Grid.Row="4" Grid.Column="1" Width="100" Height="70" Content="sin" FontSize="24" Margin="1" Click="buttonSis_Click"/>
+        <Button x:Name="buttonTn" Grid.Row="4" Grid.Column="3" Width="100" Height="70" Content="tn" FontSize="24" Margin="1" Click="buttonTn_Click"/>
+        <Button x:Name="buttonDiv" Grid.Row="4" Grid.Column="4" Width="100" Height="70" Content="÷" FontSize="24" Margin="1" Click="buttonDiv_Click"/>
+
+        <Button x:Name="button7" Grid.Row="5" Grid.Column="1" Width="100" Height="70" Content="7" FontSize="24" Margin="1" Background="DimGray" Click="Button_Click"/>
+        <Button x:Name="button8" Grid.Row="5" Grid.Column="2" Width="100" Height="70" Content="8" FontSize="24" Margin="1" Background="DimGray" Click="Button_Click"/>
+        <Button x:Name="button9" Grid.Row="5" Grid.Column="3" Width="100" Height="70" Content="9" FontSize="24" Margin="1" Background="DimGray" Click="Button_Click"/>
+        <Button x:Name="buttonMul" Grid.Row="5" Grid.Column="4" Width="100" Height="70" Content="×" FontSize="24" Margin="1" Click="buttonMul_Click"/>
+
+        <Button x:Name="button4" Grid.Row="6" Grid.Column="1" Width="100" Height="70" Content="4" FontSize="24" Margin="1" Background="DimGray" Click="Button_Click"/>
+        <Button x:Name="button5" Grid.Row="6" Grid.Column="2" Width="100" Height="70" Content="5" FontSize="24" Margin="1" Background="DimGray" Click="Button_Click"/>
+        <Button x:Name="button6" Grid.Row="6" Grid.Column="3" Width="100" Height="70" Content="6" FontSize="24" Margin="1" Background="DimGray" Click="Button_Click"/>
+        <Button x:Name="buttonMinus" Grid.Row="6" Grid.Column="4" Width="100" Height="70" Content="-" FontSize="24" Margin="1" Click="buttonMinus_Click"/>
+
+        <Button x:Name="button1" Grid.Row="7" Grid.Column="1" Width="100" Height="70" Content="1" FontSize="24" Margin="1" Background="DimGray" Click="Button_Click"/>
+        <Button x:Name="button2" Grid.Row="7" Grid.Column="2" Width="100" Height="70" Content="2" FontSize="24" Margin="1" Background="DimGray" Click="Button_Click"/>
+        <Button x:Name="button3" Grid.Row="7" Grid.Column="3" Width="100" Height="70" Content="3" FontSize="24" Margin="1" Background="DimGray" Click="Button_Click"/>
+        <Button x:Name="buttonPlus" Grid.Row="7" Grid.Column="4" Width="100" Height="70" Content="+" FontSize="24" Margin="1" Click="buttonPlus_Click"/>
+
+        <Button x:Name="buttonChangeSign" Grid.Row="8" Grid.Column="1" Width="100" Height="70" Content="±" FontSize="24" Margin="1" Click="buttonChangeSign_Click"/>
+        <Button x:Name="button0" Grid.Row="8" Grid.Column="2" Width="100" Height="70" Content="0" FontSize="24" Margin="1" Click="Button_Click" Background="DimGray"/>
+        <Button x:Name="buttonDot" Grid.Row="8" Grid.Column="3" Width="100" Height="70" Content="." FontSize="24" Margin="1" Click="Button_Click"/>
+        <Button x:Name="buttonEqual" Grid.Row="8" Grid.Column="4" Width="100" Height="70" Content="=" FontSize="24" Margin="1" Background="DarkSlateBlue" BackgroundSizing="OuterBorderEdge" Click="buttonEqual_Click"/>
+    </Grid>
+</Page>
